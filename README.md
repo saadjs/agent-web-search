@@ -26,3 +26,9 @@ pnpm run dev
 pnpm run test
 pnpm run typecheck
 ```
+
+## Deployment
+
+Cloudflare Pages injects `CF_PAGES_URL` during builds, which is used for the
+canonical and social preview URLs. Set `SITE_URL` or `VITE_SITE_URL` to override
+it when deploying to a custom domain.
