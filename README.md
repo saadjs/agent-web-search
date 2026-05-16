@@ -1,21 +1,28 @@
-# TanStack Start + shadcn/ui
+# web_search builder
 
-This is a template for a new TanStack Start project with React, TypeScript, and shadcn/ui.
+Visual request builder for comparing OpenAI Responses `web_search` blocks with
+Claude Messages `web_search` server-tool blocks. It does not make real API
+requests or require API keys.
 
-## Adding components
+## Official References
 
-To add components to your app, run the following command:
+- [OpenAI web search guide](https://developers.openai.com/api/docs/guides/tools-web-search)
+- [OpenAI conversation state guide](https://developers.openai.com/api/docs/guides/conversation-state)
+- [OpenAI model docs](https://developers.openai.com/api/docs/models)
+- [Claude web search tool docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool)
+- [Claude server tools docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/server-tools)
+- [Claude model docs](https://platform.claude.com/docs/en/about-claude/models/all-models)
+
+## Development
 
 ```bash
-npx shadcn@latest add button
+pnpm install
+pnpm run dev
 ```
 
-This will place the ui components in the `components` directory.
+## Verification
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button";
+```bash
+pnpm run test
+pnpm run typecheck
 ```
