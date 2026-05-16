@@ -29,6 +29,17 @@ pnpm run typecheck
 
 ## Deployment
 
-Cloudflare Pages injects `CF_PAGES_URL` during builds, which is used for the
-canonical and social preview URLs. Set `SITE_URL` or `VITE_SITE_URL` to override
-it when deploying to a custom domain.
+Build-time `SITE_URL` or `VITE_SITE_URL` controls the canonical and social
+preview URLs. The Cloudflare deploy script sets
+`SITE_URL=https://agent-web-search.saad.sh`.
+
+This project deploys to Cloudflare Workers Static Assets as
+`agent-web-search`:
+
+```bash
+pnpm run deploy
+```
+
+The deploy script builds with `SITE_URL=https://agent-web-search.saad.sh`, then
+uploads `dist/` with Wrangler. The Worker is attached to
+`agent-web-search.saad.sh` as a custom domain in `wrangler.jsonc`.

@@ -19,7 +19,7 @@ function RootComponent() {
       <TanStackDevtools
         config={{ position: "bottom-right" }}
         plugins={[
-          { name: "Tanstack Router", render: <TanStackRouterDevtoolsPanel /> },
+          { name: "TanStack Router", render: <TanStackRouterDevtoolsPanel /> },
         ]}
       />
     </>
