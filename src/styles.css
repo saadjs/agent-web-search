@@ -131,3 +131,15 @@
     @apply font-sans;
     }
 }
+
+@layer components {
+  .tok-key { color: oklch(0.555 0.163 48.998); }
+  .tok-str { color: oklch(0.6 0.13 160); }
+  .tok-kw  { color: oklch(0.55 0.18 280); font-weight: 500; }
+  .tok-num { color: oklch(0.55 0.18 25); }
+  .tok-comment { color: var(--muted-foreground); font-style: italic; }
+  .dark .tok-key { color: oklch(0.85 0.16 90); }
+  .dark .tok-str { color: oklch(0.75 0.14 160); }
+  .dark .tok-kw  { color: oklch(0.78 0.18 280); }
+  .dark .tok-num { color: oklch(0.78 0.18 25); }
+}
