@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router"
 import { Globe } from "lucide-react"
+import { GithubIcon } from "@/components/icons"
 import { CanvasProvider } from "@/lib/store"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { ProviderTabs } from "@/components/ProviderTabs"
@@ -30,6 +31,15 @@ function App() {
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
                 <ProviderTabs />
+                <a
+                  href="https://github.com/saadjs/agent-web-search"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="GitHub repository"
+                >
+                  <GithubIcon className="size-5" />
+                </a>
                 <ThemeToggle />
               </div>
             </div>
