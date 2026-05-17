@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 import { ProviderTabs } from "@/components/ProviderTabs"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { BuilderLayout } from "@/components/BuilderLayout"
+import { LandingIntroDialog } from "@/components/LandingIntroDialog"
 
 export const Route = createFileRoute("/")({ component: App })
 
@@ -35,11 +36,12 @@ function App() {
                   href="https://github.com/saadjs/agent-web-search"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
                   aria-label="GitHub repository"
                 >
                   <GithubIcon className="size-5" />
                 </a>
+                <LandingIntroDialog />
                 <ThemeToggle />
               </div>
             </div>
